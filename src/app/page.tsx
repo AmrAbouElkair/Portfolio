@@ -4,6 +4,7 @@ import {
   Header,
   Hero,
   Experience,
+  Skills,
 } from "@/components/views/home";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <Skills />
       </main>
       <Footer />
     </div>
