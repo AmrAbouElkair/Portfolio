@@ -1,4 +1,10 @@
-import { About, Footer, Header, Hero } from "@/components/views/home";
+import {
+  About,
+  Footer,
+  Header,
+  Hero,
+  Experience,
+} from "@/components/views/home";
 
 export default function Home() {
   return (
@@ -7,6 +13,7 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <About />
+        <Experience />
       </main>
       <Footer />
     </div>
