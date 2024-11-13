@@ -1,4 +1,4 @@
-import { Footer, Header, Hero } from "@/components/views/home";
+import { About, Footer, Header, Hero } from "@/components/views/home";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
+        <About />
       </main>
       <Footer />
     </div>
