@@ -5,6 +5,7 @@ import {
   Hero,
   Experience,
   Skills,
+  Projects,
 } from "@/components/views/home";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <About />
         <Experience />
         <Skills />
+        <Projects />
       </main>
       <Footer />
     </div>
