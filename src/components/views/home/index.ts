@@ -5,3 +5,4 @@ export { default as About } from "./sections/About";
 export { default as Experience } from "./sections/Experiance";
 export { default as Skills } from "./sections/Skills";
 export { default as Projects } from "./sections/projects/Projects";
+export { default as Contact } from "./sections/Contact";
