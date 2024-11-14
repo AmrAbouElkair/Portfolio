@@ -1,12 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
-import { BackgroundBeams } from "@/components/custom/background-beams";
-import { TypewriterEffectSmooth } from "@/components/custom/typewriter-effect";
+import { BackgroundBeams, TypewriterEffectSmooth } from "@/components/custom";
 import { useEffect, useState } from "react";
 
 const words = [

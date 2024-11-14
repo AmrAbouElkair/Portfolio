@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui";
 
 const skills = [
   "JavaScript",
@@ -31,7 +31,7 @@ export default function Skills() {
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-12 text-center gradient-text"
+          className="gradient-text mb-12 text-center text-3xl font-bold"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -56,7 +56,7 @@ export default function Skills() {
             >
               <Badge
                 variant="secondary"
-                className="text-lg py-2 px-6 rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="rounded-full px-6 py-2 text-lg transition-colors hover:bg-primary hover:text-primary-foreground"
               >
                 {skill}
               </Badge>

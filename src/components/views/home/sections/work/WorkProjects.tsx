@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
   CarouselDots,
-} from "@/components/ui/carousel";
+} from "@/components/ui";
 import { WorkProjectCard } from "./WorkProjectCard";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";

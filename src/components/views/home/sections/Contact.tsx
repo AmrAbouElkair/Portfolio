@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 
@@ -8,8 +8,8 @@ export default function Contact() {
   return (
     <section id="contact" className="py-32">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-8 gradient-text">Get in Touch</h2>
-        <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <h2 className="gradient-text mb-8 text-4xl font-bold">Get in Touch</h2>
+        <p className="mx-auto mb-12 max-w-2xl text-xl text-muted-foreground">
           Ready to bring your ideas to life? Let&apos;s collaborate and create
           something amazing together!
         </p>
@@ -17,7 +17,7 @@ export default function Contact() {
           <Button
             asChild
             size="lg"
-            className="rounded-full px-8 hover:scale-105 transition-transform"
+            className="rounded-full px-8 transition-transform hover:scale-105"
           >
             <Link href="mailto:john.doe@example.com">
               <Mail className="mr-2 h-5 w-5" /> Email Me
@@ -27,7 +27,7 @@ export default function Contact() {
             variant="outline"
             asChild
             size="lg"
-            className="rounded-full px-8 hover:scale-105 transition-transform"
+            className="rounded-full px-8 transition-transform hover:scale-105"
           >
             <Link
               href="https://github.com/johndoe"
@@ -41,7 +41,7 @@ export default function Contact() {
             variant="outline"
             asChild
             size="lg"
-            className="rounded-full px-8 hover:scale-105 transition-transform"
+            className="rounded-full px-8 transition-transform hover:scale-105"
           >
             <Link
               href="https://linkedin.com/in/johndoe"
@@ -55,7 +55,7 @@ export default function Contact() {
             variant="outline"
             asChild
             size="lg"
-            className="rounded-full px-8 hover:scale-105 transition-transform"
+            className="rounded-full px-8 transition-transform hover:scale-105"
           >
             <Link
               href="https://twitter.com/johndoe"

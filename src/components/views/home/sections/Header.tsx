@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, Button } from "@/components/ui";
 import { Code2, Menu } from "lucide-react";
 import { motion } from "framer-motion";
-import { ModeToggle } from "@/components/custom/ModeToggle";
+import { ModeToggle } from "@/components/custom";
 
 const navItems = [
   { name: "About", href: "#about" },
