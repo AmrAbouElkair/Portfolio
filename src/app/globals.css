@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
     --background: 220 25% 98%;
@@ -66,7 +70,7 @@
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
 }
 
 .timeline-gradient {

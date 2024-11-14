@@ -3,10 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui";
 import Link from "next/link";
-import { useTheme } from "next-themes";
-import { cn } from "@/lib/utils";
 import { BackgroundBeams, TypewriterEffectSmooth } from "@/components/custom";
-import { useEffect, useState } from "react";
 
 const words = [
   {
@@ -25,14 +22,9 @@ const words = [
 ];
 
 export default function Hero() {
-  const { theme } = useTheme();
-  const [isDark, setIsDark] = useState(false);
-  useEffect(() => {
-    setIsDark(theme === "dark");
-  }, [theme]);
-
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden py-20 md:py-32">
+    <section className="bg-dot-black/[0.2] dark:bg-dot-white/[0.2] relative flex min-h-screen items-center justify-center overflow-hidden bg-white py-20 dark:bg-black md:py-32">
+      <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_50%,black)] dark:bg-black" />
       <div className="container z-10 mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,7 +35,7 @@ export default function Hero() {
           <p className="text-xs text-neutral-600 dark:text-neutral-200 sm:text-base">
             {" "}
             Hello, I&apos;m{" "}
-            <span className="font-medium text-blue-500 dark:text-blue-500">
+            <span className="font-medium text-primary dark:text-primary">
               Amr Mahmoud
             </span>
             . A passionate Software Engineer.
@@ -70,12 +62,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-      <div
-        className={cn(
-          "pointer-events-none absolute inset-0 z-[-1]",
-          isDark ? "bg-doted-dark" : "bg-doted-light",
-        )}
-      />
       <BackgroundBeams />
     </section>
   );
