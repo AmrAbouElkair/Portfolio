@@ -7,6 +7,7 @@ import {
   Skills,
   WorkProjects,
   Contact,
+  PersonalProjects,
 } from "@/components/views/home";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <About />
         <Experience />
         <Skills />
+        <PersonalProjects />
         <WorkProjects />
         <Contact />
       </main>
