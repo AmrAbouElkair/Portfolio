@@ -28,10 +28,10 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-secondary/50">
+    <section id="experience" className="bg-secondary/50 py-20">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-12 text-center gradient-text"
+          className="gradient-text mb-12 text-center text-3xl font-bold"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -40,7 +40,7 @@ export default function Experience() {
           My Experience
         </motion.h2>
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 timeline-gradient rounded-full" />
+          <div className="timeline-gradient absolute left-1/2 h-full w-1 -translate-x-1/2 transform rounded-full" />
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -50,22 +50,22 @@ export default function Experience() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="absolute left-1/2 transform flex items-center -translate-x-1/2 -translate-y-4 w-8 h-8 rounded-full bg-primary shadow-lg shadow-primary/20">
-                <h1 className="mx-auto font-semibold text-lg text-primary-foreground">
+              <div className="absolute left-1/2 flex h-8 w-8 -translate-x-1/2 -translate-y-4 transform items-center rounded-full bg-primary shadow-lg shadow-primary/20">
+                <h1 className="mx-auto text-lg font-semibold text-primary-foreground">
                   {index + 1}
                 </h1>
               </div>
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className={`w-[45%] bg-card rounded-xl shadow-lg px-6 py-4 ${
+                className={`w-[45%] rounded-xl bg-card px-6 py-4 shadow-lg ${
                   index % 2 === 0 ? "ml-auto pl-4" : "mr-auto pr-4"
                 }`}
               >
-                <h3 className="font-bold text-lg mb-1">{exp.title}</h3>
+                <h3 className="mb-1 text-lg font-bold">{exp.title}</h3>
                 <div>
                   <p className="font-semibold text-primary">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground mb-2">
+                  <p className="mb-2 text-sm text-muted-foreground">
                     {exp.period}
                   </p>
                   <p className="text-muted-foreground">{exp.description}</p>
