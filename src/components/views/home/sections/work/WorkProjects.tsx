@@ -89,7 +89,7 @@ export default function WorkProjects() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          My Projects
+          Work Projects
         </motion.h2>
         <Carousel
           plugins={[autoplay.current]}
