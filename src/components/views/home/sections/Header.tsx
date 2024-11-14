@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger, Button } from "@/components/ui";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  Button,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui";
 import { Code2, Menu } from "lucide-react";
 import { motion } from "framer-motion";
 import { ModeToggle } from "@/components/custom";
@@ -20,7 +28,7 @@ export default function Header() {
 
   return (
     <motion.header
-      className="fixed left-0 right-0 top-3 z-50 mx-auto max-w-4xl rounded-full bg-background/80"
+      className="fixed left-0 right-0 top-3 z-50 mx-10 max-w-4xl rounded-full bg-background/80 sm:mx-auto"
       initial={{
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0)",
         border: "1px solid transparent",
@@ -86,13 +94,19 @@ export default function Header() {
                 transition={{ duration: 0.5, delay: navItems.length * 0.1 }}
               >
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="icon">
-                    <Menu className="!h-6 !w-6" />
+                  <Button variant="outline" size="icon" className="group">
+                    <Menu className="!h-6 !w-6 group-hover:text-white" />
                     <span className="sr-only">Toggle menu</span>
                   </Button>
                 </SheetTrigger>
               </motion.div>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <SheetHeader className="hidden">
+                  <SheetTitle>Mobile Navbar</SheetTitle>
+                  <SheetDescription>
+                    This is the mobile navigation bar
+                  </SheetDescription>
+                </SheetHeader>
                 <nav className="mt-40 flex flex-col items-center gap-y-14">
                   {navItems.map((item) => (
                     <Link
