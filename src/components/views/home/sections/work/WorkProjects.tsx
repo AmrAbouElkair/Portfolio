@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
   CarouselDots,
 } from "@/components/ui/carousel";
-import { ProjectCard } from "./ProjectCard";
+import { WorkProjectCard } from "./WorkProjectCard";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import { motion } from "framer-motion";
@@ -76,14 +76,14 @@ const projects = [
   },
 ];
 
-export default function Projects() {
+export default function WorkProjects() {
   const autoplay = useRef(Autoplay({ delay: 2000 }));
 
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-12 text-center gradient-text"
+          className="gradient-text mb-12 text-center text-3xl font-bold"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -95,21 +95,21 @@ export default function Projects() {
           plugins={[autoplay.current]}
           onMouseEnter={autoplay.current.stop}
           onMouseLeave={() => autoplay.current.play()}
-          className="w-full max-w-7xl mx-auto"
+          className="mx-auto w-full max-w-7xl"
         >
           <CarouselContent>
             {projects.map((project, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                <ProjectCard {...project} />
+                <WorkProjectCard {...project} />
               </CarouselItem>
             ))}
           </CarouselContent>
           <CarouselPrevious
-            className="absolute -left-16 rounded-full top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white"
+            className="absolute -left-16 top-1/2 -translate-y-1/2 rounded-full bg-white/10 text-white hover:bg-white/20"
             variant="ghost"
           />
           <CarouselNext
-            className="absolute -right-16 top-1/2 rounded-full -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white"
+            className="absolute -right-16 top-1/2 -translate-y-1/2 rounded-full bg-white/10 text-white hover:bg-white/20"
             variant="ghost"
           />
           <CarouselDots />
