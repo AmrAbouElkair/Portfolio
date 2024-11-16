@@ -63,21 +63,14 @@ html {
 }
 
 /* Custom styles */
-.glass-nav {
-  backdrop-filter: blur(16px);
-  background: hsl(var(--background) / 0.8);
-  border: 1px solid hsl(var(--border) / 0.2);
-}
-
 .gradient-text {
   @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
 }
 
 .timeline-gradient {
-  background: linear-gradient(
-    to bottom,
-    hsl(var(--primary) / 0.2),
-    hsl(var(--primary) / 0.1),
-    transparent
-  );
+  @apply bg-gradient-to-b from-primary/20 via-primary/10 to-transparent;
+}
+
+.main-container {
+  @apply px-4 lg:mx-auto lg:h-full lg:pb-0 xl:w-[85%];
 }
