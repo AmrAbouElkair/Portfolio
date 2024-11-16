@@ -45,19 +45,20 @@ export default function Hero() {
           </div>
           <div className="flex justify-center space-x-4">
             <Button
-              size="lg"
-              className="rounded-full px-8 text-white transition-transform hover:scale-105"
-              asChild
-            >
-              <Link href="#contact">Get in Touch</Link>
-            </Button>
-            <Button
               variant="outline"
               size="lg"
               className="rounded-full px-8 transition-transform hover:scale-105 hover:bg-[#F9F9FB] hover:text-black dark:hover:bg-[#0B0D13] dark:hover:text-white"
               asChild
             >
-              <Link href="#projects">Download CV</Link>
+              <Link href="#contact">Get in Touch</Link>
+            </Button>
+            <Button
+              size="lg"
+              className="rounded-full px-8 text-white transition-transform hover:scale-105"
+              asChild
+            >
+              {/* <Link href="#projects">Download CV</Link> */}
+              <span>Download CV</span>
             </Button>
           </div>
         </motion.div>
