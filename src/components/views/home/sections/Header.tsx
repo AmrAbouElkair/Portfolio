@@ -28,16 +28,18 @@ export default function Header() {
 
   return (
     <motion.header
-      className="fixed left-0 right-0 top-3 z-50 mx-10 max-w-4xl rounded-full bg-background/80 sm:mx-auto"
+      className="fixed left-0 right-0 top-3 z-50 mx-10 max-w-4xl rounded-full lg:mx-auto"
       initial={{
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0)",
         border: "1px solid transparent",
         backdropFilter: "blur(0)",
+        backgroundColor: "transparent",
       }}
       animate={{
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
         border: "1px solid hsl(var(--border))",
-        backdropFilter: "blur(5px)",
+        backdropFilter: "blur(3px)",
+        backgroundColor: "hsl(var(--background))",
       }}
       transition={{ duration: 0.5, ease: "linear" }}
     >
