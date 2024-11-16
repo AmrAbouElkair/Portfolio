@@ -14,7 +14,7 @@ const words = [
   },
   {
     text: "Front End",
-    className: "text-blue-500 dark:text-blue-500",
+    className: "text-primary dark:text-primary",
   },
   {
     text: "Developer",
@@ -23,9 +23,9 @@ const words = [
 
 export default function Hero() {
   return (
-    <section className="bg-dot-black/[0.2] dark:bg-dot-white/[0.2] relative flex min-h-screen items-center justify-center overflow-hidden bg-white py-20 dark:bg-black md:py-32">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white py-20 bg-dot-black/[0.2] dark:bg-black dark:bg-dot-white/[0.2] md:py-32">
       <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_50%,black)] dark:bg-black" />
-      <div className="container z-10 mx-auto px-4">
+      <div className="main-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
