@@ -1,3 +1,4 @@
+import SectionHeader from "@/components/custom/SectionHeader";
 import { Button } from "@/components/ui";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
@@ -8,7 +9,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-32">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="gradient-text mb-8 text-4xl font-bold">Get in Touch</h2>
+        <SectionHeader title="Get in Touch" className="pb-8" />
         <p className="mx-auto mb-12 max-w-2xl text-xl text-muted-foreground">
           Ready to bring your ideas to life? Let&apos;s collaborate and create
           something amazing together!

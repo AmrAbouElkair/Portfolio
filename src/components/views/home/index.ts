@@ -6,4 +6,4 @@ export { default as Experience } from "./sections/Experiance";
 export { default as Skills } from "./sections/Skills";
 export { default as WorkProjects } from "./sections/work/WorkProjects";
 export { default as Contact } from "./sections/Contact";
-export { default as PersonalProjects } from "./sections/PerosnalProjects";
+export { default as PersonalProjects } from "./sections/personal/PerosnalProjects";

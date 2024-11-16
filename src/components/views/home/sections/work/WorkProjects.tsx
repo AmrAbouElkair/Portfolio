@@ -11,7 +11,7 @@ import {
 import { WorkProjectCard } from "./WorkProjectCard";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
-import { motion } from "framer-motion";
+import SectionHeader from "@/components/custom/SectionHeader";
 
 const projects = [
   {
@@ -81,25 +81,17 @@ export default function WorkProjects() {
 
   return (
     <section id="projects" className="py-20">
-      <div className="container mx-auto px-4">
-        <motion.h2
-          className="gradient-text mb-12 text-center text-3xl font-bold"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          Work Projects
-        </motion.h2>
+      <div className="main-container">
+        <SectionHeader title="Work Projects" />
         <Carousel
           plugins={[autoplay.current]}
           onMouseEnter={autoplay.current.stop}
           onMouseLeave={() => autoplay.current.play()}
-          className="mx-auto w-full max-w-7xl"
+          className="w-full"
         >
           <CarouselContent>
             {projects.map((project, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <WorkProjectCard {...project} />
               </CarouselItem>
             ))}

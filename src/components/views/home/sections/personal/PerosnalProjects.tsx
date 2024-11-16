@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import CustomSectionHeader from "@/components/custom/CustomSectionHeader";
+import SectionHeader from "@/components/custom/SectionHeader";
 import PersonalProjectCard from "./PersonalProjectCard";
 
 const projects = [
@@ -64,7 +64,7 @@ export default function Projects() {
   return (
     <section id="projects" className="bg-secondary/50 py-20">
       <div className="main-container">
-        <CustomSectionHeader title="Personal Projects" />
+        <SectionHeader title="Personal Projects" />
         <div className="relative grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {visibleProjects.slice(0, 3).map((project, index) => (
             <motion.div

@@ -1,5 +1,6 @@
 "use client";
 
+import SectionHeader from "@/components/custom/SectionHeader";
 import { motion } from "framer-motion";
 
 const experiences = [
@@ -29,28 +30,20 @@ const experiences = [
 export default function Experience() {
   return (
     <section id="experience" className="bg-secondary/50 py-20">
-      <div className="container mx-auto px-4">
-        <motion.h2
-          className="gradient-text mb-12 text-center text-3xl font-bold"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          My Experience
-        </motion.h2>
+      <div className="main-container">
+        <SectionHeader title="My Experience" className="pb-14" />
         <div className="relative">
-          <div className="timeline-gradient absolute left-1/2 h-full w-1 -translate-x-1/2 transform rounded-full" />
+          <div className="timeline-gradient absolute left-1/2 hidden h-full w-1 -translate-x-1/2 transform rounded-full sm:block" />
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              className="relative mb-12"
+              className="relative mb-8 sm:mb-12"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="absolute left-1/2 flex h-8 w-8 -translate-x-1/2 -translate-y-4 transform items-center rounded-full bg-primary shadow-lg shadow-primary/20">
+              <div className="absolute left-1/2 hidden h-8 w-8 -translate-x-1/2 -translate-y-4 transform items-center rounded-full bg-primary shadow-lg shadow-primary/20 sm:flex">
                 <h1 className="mx-auto text-lg font-semibold text-primary-foreground">
                   {index + 1}
                 </h1>
@@ -58,7 +51,7 @@ export default function Experience() {
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className={`w-[45%] rounded-xl bg-card px-6 py-4 shadow-lg ${
+                className={`w-full rounded-xl bg-card px-6 py-4 shadow-lg sm:w-1/2 lg:w-[45%] ${
                   index % 2 === 0 ? "ml-auto pl-4" : "mr-auto pr-4"
                 }`}
               >
