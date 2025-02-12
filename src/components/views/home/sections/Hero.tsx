@@ -13,7 +13,7 @@ const words = [
     text: " I'm a",
   },
   {
-    text: "Front End",
+    text: "UI & UX Designer",
     className: "text-primary dark:text-primary",
   },
   {
@@ -36,9 +36,9 @@ export default function Hero() {
             {" "}
             Hello, I&apos;m{" "}
             <span className="font-medium text-primary dark:text-primary">
-              Amr Mahmoud
+              Joe Dave
             </span>
-            . A passionate Software Engineer.
+            . A passionate UI & UX Designer.
           </p>
           <div className="flex w-full justify-center">
             <TypewriterEffectSmooth words={words} />
